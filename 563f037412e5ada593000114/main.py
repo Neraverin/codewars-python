@@ -23,12 +23,18 @@
 # Your task is to complete the method provided and return the number of years 'Y' as a whole in order for
 # Mr. Scrooge to get the desired sum.
 #
-# Assumptions : Assume that Desired Principal 'D' is always greater than the initial principal, however it is best to take into consideration that if the Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
+# Assumptions : Assume that Desired Principal 'D' is always greater than the initial principal, however it is best to
+#  take into consideration that if the Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
 import unittest
 
 class TestKata(unittest.TestCase):
     def calculate_years(self, principal, interest, tax, desired):
-        raise NotImplementedError("TODO: calculate_years")
+        years = 0
+        money = principal
+        while money < desired:
+            money = money + money*interest*(1 - tax)
+            years = years + 1
+        return years
 
     def test_basic(self):
         self.assertEqual(self.calculate_years(1000, 0.05, 0.18, 1100), 3)
