@@ -7,15 +7,20 @@ import unittest
 
 class TestKata(unittest.TestCase):
     def array_diff(self, a, b):
-        print("stub")
+        for element in b:
+            try:
+                while a.index(element) >= 0:
+                    a.remove(element)
+            except:
+                continue
         return a
 
     def test_basic(self):
-        self.assertEquals(self.array_diff([1, 2], [1]), [2], "a was [1,2], b was [1], expected [2]")
-        self.assertEquals(self.array_diff([1, 2, 2], [1]), [2, 2], "a was [1,2,2], b was [1], expected [2,2]")
-        self.assertEquals(self.array_diff([1, 2, 2], [2]), [1], "a was [1,2,2], b was [2], expected [1]")
-        self.assertEquals(self.array_diff([1, 2, 2], []), [1, 2, 2], "a was [1,2,2], b was [], expected [1,2,2]")
-        self.assertEquals(self.array_diff([], [1, 2]), [], "a was [], b was [1,2], expected []")
+        self.assertEqual(self.array_diff([1, 2], [1]), [2], "a was [1,2], b was [1], expected [2]")
+        self.assertEqual(self.array_diff([1, 2, 2], [1]), [2, 2], "a was [1,2,2], b was [1], expected [2,2]")
+        self.assertEqual(self.array_diff([1, 2, 2], [2]), [1], "a was [1,2,2], b was [2], expected [1]")
+        self.assertEqual(self.array_diff([1, 2, 2], []), [1, 2, 2], "a was [1,2,2], b was [], expected [1,2,2]")
+        self.assertEqual(self.array_diff([], [1, 2]), [], "a was [], b was [1,2], expected []")
 
 
 if __name__ == '__main__':
