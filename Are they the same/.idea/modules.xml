@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Are they the same.iml" filepath="$PROJECT_DIR$/.idea/Are they the same.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Square Every Digit/.idea/Square Every Digit.iml" filepath="$PROJECT_DIR$/../Square Every Digit/.idea/Square Every Digit.iml" />
     </modules>
   </component>
 </project>
