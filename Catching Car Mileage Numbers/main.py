@@ -16,7 +16,8 @@
 # Error Checking
 # A number is only interesting if it is greater than 99!
 # Input will always be an integer greater than 0, and less than 1,000,000,000.
-# The awesomePhrases array will always be provided, and will always be an array, but may be empty. (Not everyone thinks numbers spell funny words...)
+# The awesomePhrases array will always be provided, and will always be an array, but may be empty.
+# (Not everyone thinks numbers spell funny words...)
 # You should only ever output 0, 1, or 2.
 
 import unittest
