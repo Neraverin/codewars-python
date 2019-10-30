@@ -5,12 +5,14 @@
 # should be 6: [4, -1, 2, 1]
 # Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array.
 # If the list is made up of only negative numbers, return 0 instead.
-# Empty list is considered to have zero greatest sum. Note that the empty list or array is also a valid sublist/subarray.
+# Empty list is considered to have zero greatest sum. Note that the empty list or array is also a valid sublist/subarray
 
 import unittest
 
+
 class TestKata(unittest.TestCase):
-    def maxSequence(self, arr):
+    @staticmethod
+    def maxSequence(arr):
         max_sum = 0
         for i in range(1, len(arr) + 1):
             for j in range(0, len(arr) - i + 1):
@@ -27,6 +29,7 @@ class TestKata(unittest.TestCase):
 
     def test_negative_case(self):
         self.assertEqual(self.maxSequence([-1, -2, -5, -3, -2, -7]), 0)
+
 
 if __name__ == "__main__":
     unittest.main()
